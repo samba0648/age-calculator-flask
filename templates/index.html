@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12">
+          <h2 class="text-center my-3 text-info">Age Calculator</h2>
+          <form method="post" class="p-4 border rounded shadow-sm">
+            <div class="form-group">
+              <label for="birth_date">Enter your birth date:</label>
+              <input
+                type="date"
+                id="birth_date"
+                name="birth_date"
+                class="form-control"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Calculate Age
+            </button>
+          </form>
+
+          {% if age_years is not none %}
+          <div class="mt-4 alert alert-info text-center">
+            <p>
+              Your age is:
+              <strong
+                >{{ age_years }} years, {{ age_months }} months, and {{ age_days
+                }} days</strong
+              >
+            </p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
