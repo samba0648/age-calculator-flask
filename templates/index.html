@@ -16,32 +16,28 @@
           <h2 class="text-center my-3 text-info">Age Calculator</h2>
           <form method="post" class="p-4 border rounded shadow-sm">
             <div class="form-group">
-              <label for="birth_date">Enter your birth date:</label>
-              <input
-                type="date"
-                id="birth_date"
-                name="birth_date"
-                class="form-control"
-                value="{{ birth_date_str }}"
-                required
-              />
+                <label for="birth_date">Enter your birth date:</label>
+                <input type="date" id="birth_date" name="birth_date" class="form-control" value="{{ birth_date_str }}" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">
-              Calculate Age
-            </button>
-          </form>
+            <div class="form-group">
+                <label for="birth_time">Enter your birth time:</label>
+                <input type="time" id="birth_time" name="birth_time" class="form-control" value="{{ birth_time_str or '00:00' }}" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Calculate Age and Generate Report</button>
+        </form>
 
-          {% if age_years is not none %}
-          <div class="mt-4 alert alert-info text-center">
-            <p>
-              Your age is:
-              <strong
-                >{{ age_years }} years, {{ age_months }} months, and {{ age_days
-                }} days</strong
-              >
-            </p>
-          </div>
-          {% endif %}
+        {% if age_years is not none %}
+            <div class="mt-4 alert alert-info text-center">
+                <p>Your age is: <strong>{{ age_years }} years, {{ age_months }} months, and {{ age_days }} days</strong></p>
+            </div>
+        {% endif %}
+
+        {% if zodiac_sign %}
+            <div class="mt-4 alert alert-success text-center">
+                <p>Your zodiac sign is: <strong>{{ zodiac_sign }}</strong></p>
+                <p>Your Nakshatra is: <strong>{{ nakshatra }}</strong></p>
+            </div>
+        {% endif %}
         </div>
       </div>
     </div>
