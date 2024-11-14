@@ -72,7 +72,8 @@ age_calculator/
 
 ## Screenshot
 
-![Output](image.png)
+![image](https://github.com/user-attachments/assets/8fbe55d5-789b-43e8-8485-10adfbc67080)
+
 
 ## Future Improvements
 
