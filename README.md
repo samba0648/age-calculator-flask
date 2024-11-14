@@ -1,10 +1,11 @@
-# Age Calculator
+# Age Calculator and Astrology Report
 
-A simple, responsive web application that calculates age in years, months, and days based on the birthdate provided. This application is built using **Flask** (a Python web framework) and **Bootstrap** for a responsive design.
+A simple, responsive web application that calculates age in years, months, and days and generates astrology reports with zodiac signs and Nakshatra based on the birthdate and time provided. This application is built using **Flask** (a Python web framework) and **Bootstrap** for a responsive design.
 
 ## Features
 
 - Calculates and displays age in years, months, and days.
+- Generates astrology reports with zodiac sign and Nakshatra
 - User-friendly interface with Bootstrap styling.
 - Responsive design for mobile, tablet, and desktop views.
 - Minimalistic and clean UI for easy use.
@@ -66,7 +67,8 @@ age_calculator/
 
 1. Open the application in your browser.
 2. Enter your birthdate in the provided input field.
-3. Click on **Calculate Age** to see the age in years, months, and days.
+3. Enter your birth time in the time picker. The default is set to 00:00.
+4. Click on **Calculate Age and Generate Report** to see the age in years, months, and days.
 
 ## Screenshot
 
